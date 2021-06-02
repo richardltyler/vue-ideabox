@@ -1,6 +1,6 @@
 <template>
-  <main class="bubble">
-    <article class='card' :key="idea.id" v-for="idea in ideas" >
+  <main >
+    <article class='card bubble' :key="idea.id" v-for="idea in ideas" >
       <Card :idea="idea"/>
     </article> 
   </main>
@@ -30,10 +30,11 @@ export default {
   }
 
   .card {
-    background-color: #2c3e50;
-    margin-top: 1rem;
-    margin-bottom: 1rem;
+    /* background-color: #2c3e50; */
+    /* margin-top: 1rem;
+    margin-bottom: 1rem; */
     text-align: center;
-    color: white;
+    /* color: white; */
   }
+
 </style>
