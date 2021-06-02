@@ -1,15 +1,26 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <h1>Sah Dude</h1>
+  <Ideas :ideas="ideas" />
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+// import HelloWorld from './components/HelloWorld.vue'
+import Ideas from './components/Ideas.vue';
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    Ideas
+  },
+
+  data() {
+    return {
+      ideas: [
+        {idea: 'Lights in clear drums', id: 1},
+        {idea: 'Hardware same color as cymbals', id: 2},
+        {idea: 'Translucent color front kick head', id: 3}
+      ]
+    };
   }
 }
 </script>
@@ -21,6 +32,11 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 1rem;
+  margin: 1rem;
 }
+
 </style>
