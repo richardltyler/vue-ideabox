@@ -1,7 +1,7 @@
 <template>
   <main>
     <article class='card' :key="idea.id" v-for="idea in ideas" >
-      <Card />
+      <Card :idea="idea"/>
     </article> 
   </main>
   
