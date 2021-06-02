@@ -49,7 +49,6 @@ body {
   margin: 0;
   width: 100%;
   font-size: 50px;
-
 }
 
 .bubble {
@@ -57,5 +56,4 @@ body {
   border-radius: 10px;
   border: 3px solid #6E9887;
 }
-
 </style>
