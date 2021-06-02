@@ -1,6 +1,6 @@
 <template>
   <h1 class="app-title bubble">Sah Dude</h1>
-  <Form />
+  <Form @addIdea="addIdea"/>
   <Ideas :ideas="ideas" />
 </template>
 
@@ -23,6 +23,12 @@ export default {
         {idea: 'Translucent color front kick head', id: 3}
       ]
     };
+  },
+
+  methods: {
+    addIdea(newIdea) {
+      this.ideas = [...this.ideas, newIdea];
+    }
   }
 }
 </script>

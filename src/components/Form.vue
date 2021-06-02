@@ -5,15 +5,36 @@
       name='idea'
       id='idea-input'
       placeholder='idea'
+      v-model="idea"
     />
 
-    <button id='submit-button'>Submit</button>
+    <button id='submit-button' @click="submitIdea">Submit</button>
   </form>
 </template>
 
 <script>
 export default {
-  name: 'Form'
+  name: 'Form',
+  data() {
+    return {
+      idea: ''
+    };
+  },
+
+  methods: {
+    submitIdea(e) {
+      e.preventDefault();
+
+      const newIdea = {
+        id: Date.now(),
+        idea: this.idea
+      }
+
+      this.$emit('add-idea', newIdea);
+      
+      this.idea = '';
+    }
+  }
 }
 </script>
 
