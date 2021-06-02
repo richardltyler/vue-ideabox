@@ -1,5 +1,5 @@
 <template>
-  <h2>{{ idea.title }}</h2>
+  <h2>{{ idea.idea }}</h2>
 </template>
 
 <script>
@@ -10,5 +10,7 @@ export default {
 </script>
 
 <style scoped>
-
+h2 {
+  /* color: white; */
+}
 </style>

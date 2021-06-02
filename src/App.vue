@@ -1,5 +1,5 @@
 <template>
-  <h1>Sah Dude</h1>
+  <h1 class="app-title bubble">Sah Dude</h1>
   <Ideas :ideas="ideas" />
 </template>
 
@@ -26,6 +26,12 @@ export default {
 </script>
 
 <style>
+body { 
+  margin: 0;
+  background-color: #2c3e50;
+  padding: 1rem;
+}
+
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -36,7 +42,19 @@ export default {
   flex-direction: column;
   align-items: center;
   row-gap: 1rem;
-  margin: 1rem;
+  width: 100%;
+}
+
+.app-title {
+  margin: 0;
+  width: 100%;
+  font-size: 50px;
+
+}
+
+.bubble {
+  background-color: rgb(255, 255, 255, .8);
+  border-radius: 10px;
 }
 
 </style>
