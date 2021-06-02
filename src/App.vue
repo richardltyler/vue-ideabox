@@ -1,7 +1,7 @@
 <template>
   <h1 class="app-title bubble">Sah Dude</h1>
   <Form @addIdea="addIdea"/>
-  <Ideas :ideas="ideas" />
+  <Ideas :ideas="ideas" @del-Idea="deleteIdea" />
 </template>
 
 <script>
@@ -28,6 +28,10 @@ export default {
   methods: {
     addIdea(newIdea) {
       this.ideas = [...this.ideas, newIdea];
+    },
+
+    deleteIdea(ID) {
+      this.ideas = this.ideas.filter(idea => idea.id !== ID);
     }
   }
 }

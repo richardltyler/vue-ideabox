@@ -31,8 +31,7 @@ export default {
         idea: this.idea
       }
 
-      // !!this.idea &&
-        this.$emit('add-idea', newIdea);
+      this.$emit('add-idea', newIdea);
       
       this.idea = '';
     }

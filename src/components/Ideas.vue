@@ -1,7 +1,7 @@
 <template>
   <main >
     <article class='card bubble' :key="idea.id" v-for="idea in ideas" >
-      <Card :idea="idea"/>
+      <Card :idea="idea" @del-idea="$emit('del-idea', idea.id)" />
     </article> 
   </main>
   
