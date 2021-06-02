@@ -1,6 +1,6 @@
 <template>
   <h2>{{ idea.idea }}</h2>
-  <button @click="$emit('del-idea', idea.id)">🗑</button>
+  <button id='delete-button' @click="$emit('del-idea', idea.id)">🗑</button>
 </template>
 
 <script>
@@ -11,5 +11,11 @@ export default {
 }
 </script>
 
-<style scoped>
+<style >
+#delete-button {
+  align-self: flex-end;
+  border: none;
+  background: rgb(0, 0, 0, 0);
+  font-size: 1.5rem;
+}
 </style>
