@@ -1,15 +1,17 @@
 <template>
   <h1 class="app-title bubble">Sah Dude</h1>
+  <Form />
   <Ideas :ideas="ideas" />
 </template>
 
 <script>
-// import HelloWorld from './components/HelloWorld.vue'
+import Form from './components/Form.vue';
 import Ideas from './components/Ideas.vue';
 
 export default {
   name: 'App',
   components: {
+    Form,
     Ideas
   },
 
