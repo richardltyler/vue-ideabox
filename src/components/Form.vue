@@ -1,14 +1,15 @@
 <template>
-  <form class='bubble'>
+  <form class='bubble' @submit="submitIdea">
     <input
       type='text'
       name='idea'
       id='idea-input'
       placeholder='idea'
       v-model="idea"
+      required
     />
 
-    <button id='submit-button' @click="submitIdea">Submit</button>
+    <button type='submit' id='submit-button'>Submit</button>
   </form>
 </template>
 
@@ -30,7 +31,8 @@ export default {
         idea: this.idea
       }
 
-      this.$emit('add-idea', newIdea);
+      // !!this.idea &&
+        this.$emit('add-idea', newIdea);
       
       this.idea = '';
     }
