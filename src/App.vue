@@ -55,6 +55,7 @@ body {
 .bubble {
   background-color: rgb(255, 255, 255, .8);
   border-radius: 10px;
+  border: 3px solid #6E9887;
 }
 
 </style>
