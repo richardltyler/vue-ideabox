@@ -7,11 +7,11 @@ Vue-ideabox is a virtual playground that I'm using to brush up on Vue.js and lea
 - [x] Display all ideas from static data in the app's highest component's `state`
 
 ### Iteration 2
-- [ ] Add a `controlled form` component to add `ideas` 
+- [x] Add a `controlled form` component to add `ideas` 
   - the `ideas` should be added to the app's `state` and then automatically display on the DOM
 
 ### Iteration 3
-- [ ] Add a `delete` button to each `idea`
+- [x] Add a `delete` button to each `idea`
   - the `delete` button should update the app's `state` and then automatically remove the idea form the DOM
 
 ### Iteration 4
