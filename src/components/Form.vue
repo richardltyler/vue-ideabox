@@ -28,7 +28,8 @@ export default {
 
       const newIdea = {
         id: Date.now(),
-        idea: this.idea
+        title: this.idea,
+        description: 'Description'
       }
 
       this.$emit('add-idea', newIdea);
