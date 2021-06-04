@@ -28,7 +28,8 @@ export default {
     },
 
     deleteIdea(ID) {
-      this.ideas = this.ideas.filter(idea => idea.id !== ID);
+      apiCalls.deleteIdea(ID)
+        .then(() => this.ideas = this.ideas.filter(idea => idea.id !== ID))
     }
   },
 
