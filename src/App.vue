@@ -7,6 +7,7 @@
 <script>
 import Form from './components/Form.vue';
 import Ideas from './components/Ideas.vue';
+import apiCalls from './apiCalls.js';
 
 export default {
   name: 'App',
@@ -17,11 +18,7 @@ export default {
 
   data() {
     return {
-      ideas: [
-        {idea: 'Lights in clear drums', id: 1},
-        {idea: 'Hardware same color as cymbals', id: 2},
-        {idea: 'Translucent color front kick head', id: 3}
-      ]
+      ideas: []
     };
   },
 
@@ -33,6 +30,11 @@ export default {
     deleteIdea(ID) {
       this.ideas = this.ideas.filter(idea => idea.id !== ID);
     }
+  },
+
+  created() {
+    apiCalls.getIdeas()
+      .then(ideas => this.ideas = ideas)
   }
 }
 </script>

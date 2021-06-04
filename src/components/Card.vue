@@ -1,5 +1,5 @@
 <template>
-  <h2>{{ idea.idea }}</h2>
+  <h2>{{ idea.title }}</h2>
   <button id='delete-button' @click="$emit('del-idea', idea.id)">🗑</button>
 </template>
 
