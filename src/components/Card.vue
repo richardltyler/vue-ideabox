@@ -6,7 +6,9 @@
 <script>
 export default {
   name: 'Card',
-  props: ['idea'],
+  props: {
+    idea: Object
+  },
   emits: ['del-idea']
 }
 </script>
