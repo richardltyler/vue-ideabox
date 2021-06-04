@@ -15,15 +15,25 @@ Vue-ideabox is a virtual playground that I'm using to brush up on Vue.js and lea
   - the `delete` button should update the app's `state` and then automatically remove the idea form the DOM
 
 ### Iteration 4
-- [ ] Refactor the app to display data from [Turing's IdeaBox API](https://github.com/turingschool-examples/ideabox-api)
+- [x] Refactor the app to display data from [Turing's IdeaBox API](https://github.com/turingschool-examples/ideabox-api)
+
+### Iteration 5
+- [ ] refactor to include the `description` property from the api
+  - include an input field for it in the `Form` component
+  - display the `descriptions`
+
+### Iteration 6
+- [ ] Build your own `Express` api for your ideas 
+  - don't forget documentation!
 
 ## How to *Vue* (wink) the app
 
-1. Fork and clone this repo
-2. cd into the directory
-3. install dependencies with `npm install` 
-4. run `npm run serve`
-5. visit [localhost:8080](http://localhost:8080/) in your browser
+1. Follow the setup instructions for the [the ideabox api](https://github.com/turingschool-examples/ideabox-api)
+2. Fork and clone this repo
+3. cd into the directory
+4. install dependencies with `npm install` 
+5. run `npm run serve`
+6. visit [localhost:8080](http://localhost:8080/) in your browser
 
 ## Additional Features
 I will eventually be using this repo as a place to practice E2E testing using Cypress and learning other ways to test Vue.Js apps
