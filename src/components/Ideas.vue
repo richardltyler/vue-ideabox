@@ -12,7 +12,9 @@ import Card from './Card.vue';
 
 export default {
   name: 'Ideas',
-  props: ['ideas'],
+  props: {
+    ideas: Array
+  },
   components: {
     Card
   }
