@@ -7,12 +7,10 @@ const apiCalls = {
   },
 
   deleteIdea(ID) {
-    return fetch(`${baseURL}/${ID}`, {method: "Delete"})
-      .then(res => res.json())
+    return fetch(`${baseURL}/${ID}`, {method: "DELETE"})
   },
 
   addIdea(idea) {
-    // console.log(idea)
     const options = {
       method: "POST",
       headers: {
@@ -20,7 +18,7 @@ const apiCalls = {
       },
       body: JSON.stringify(idea)
     }
-    console.log(options.body)
+    
     return fetch(baseURL, options)
       .then(res => res.json())
   }

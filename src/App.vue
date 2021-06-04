@@ -24,17 +24,14 @@ export default {
 
   methods: {
     addIdea(newIdea) {
-      // this.ideas = [...this.ideas, newIdea];
       apiCalls.addIdea(newIdea)
         .then(() => this.ideas = [...this.ideas, newIdea])
     },
 
     deleteIdea(ID) {
       apiCalls.deleteIdea(ID)
-        .then(res => this.ideas = this.ideas.filter(idea => idea.id !== res.id))
+        .then(() => this.ideas = this.ideas.filter(idea => idea.id !== ID))
     },
-
-
   },
 
   created() {
