@@ -1,5 +1,5 @@
 <template>
-  <main >
+  <main>
     <article class='card bubble' v-for="(idea, index) in ideas" v-bind:key="index">
       <Card :idea="idea" @del-idea="$emit('del-idea', idea.id)" />
     </article> 

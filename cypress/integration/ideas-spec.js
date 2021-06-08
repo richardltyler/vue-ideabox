@@ -1,4 +1,4 @@
-describe("App", () => {
+describe("Ideas", () => {
   beforeEach(() => {
     cy.fixture('ideas_data.json')
       .then((response) => {
@@ -10,7 +10,11 @@ describe("App", () => {
     cy.visit("http://localhost:8080");
   });
 
-  it("should be there", () => {
-    cy.get('#app').should('be.visible');
+  it('should have an ideas area', () => {
+    cy.get("main").should('be.visible');
   });
-});
+
+  it('should have a card for each idea', () => {
+    cy.get(".card").should('have.length', 3)
+  });
+})
