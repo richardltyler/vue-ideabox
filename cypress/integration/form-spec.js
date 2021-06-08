@@ -1,5 +1,3 @@
-
-
 describe('Form', () => {
   beforeEach(() => {
     cy.fixture('ideas_data.json')
@@ -13,8 +11,8 @@ describe('Form', () => {
       .then((response) => {
         cy.intercept('POST', 'http://localhost:3001/api/v1/ideas', {
           body: response
-        })
-      })
+        });
+      });
 
     cy.visit("http://localhost:8080");
   });
@@ -29,15 +27,15 @@ describe('Form', () => {
 
   it('should have a submit button', () => {
     cy.get('form #submit-button').should('be.visible')
-      .and('contain', 'SUBMIT')
-  })
+      .and('contain', 'SUBMIT');
+  });
 
   it('should add a card at the end of the ideas', () => {
     cy.get('.card').should('have.length', 3);
 
     cy.get('h2:first').should('contain', 'Prank Travis');
 
-    cy.get('h2:last').should('contain', 'Learn a martial art')
+    cy.get('h2:last').should('contain', 'Learn a martial art');
 
     cy.get('form input').type('test');
 
@@ -51,4 +49,4 @@ describe('Form', () => {
 
     cy.get('h2:last').should('contain', 'test');
   });
-})
+});
