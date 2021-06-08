@@ -18,11 +18,15 @@ Vue-ideabox is a virtual playground that I'm using to brush up on Vue.js and lea
 - [x] Refactor the app to display data from [Turing's IdeaBox API](https://github.com/turingschool-examples/ideabox-api)
 
 ### Iteration 5
+- [x] Inlcude full E2E testing with `Cypress` 
+  - must stub `POST` and `GET` requests
+
+### Iteration 6
 - [ ] refactor to include the `description` property from the api
   - include an input field for it in the `Form` component
   - display the `descriptions`
 
-### Iteration 6
+### Iteration 7
 - [ ] Build your own `Express` api for your ideas 
   - don't forget documentation!
 
