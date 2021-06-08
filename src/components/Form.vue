@@ -9,7 +9,7 @@
       required
     />
 
-    <button type='submit' id='submit-button'>Submit</button>
+    <button type='submit' id='submit-button'>SUBMIT</button>
   </form>
 </template>
 
