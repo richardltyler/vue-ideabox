@@ -22,7 +22,7 @@ Vue-ideabox is a virtual playground that I'm using to brush up on Vue.js and lea
   - must stub `POST` and `GET` requests
 
 ### Iteration 6
-- [ ] refactor to include the `description` property from the api
+- [x] refactor to include the `description` property from the api
   - include an input field for it in the `Form` component
   - display the `descriptions`
 
