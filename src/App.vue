@@ -9,7 +9,7 @@ import Form from './components/Form.vue';
 import Ideas from './components/Ideas.vue';
 import apiCalls from './apiCalls.js';
 
-export default {
+export default { 
   name: 'App',
   components: {
     Form,
