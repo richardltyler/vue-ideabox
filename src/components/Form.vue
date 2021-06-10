@@ -2,10 +2,21 @@
   <form class='bubble' @submit="submitIdea">
     <input
       type='text'
-      name='idea'
-      id='idea-input'
-      placeholder='idea'
-      v-model="idea"
+      name='title'
+      id='title'
+      class='input'
+      placeholder='title'
+      v-model="idea.title"
+      required
+    />
+
+    <input
+      type='text'
+      name='description'
+      id='description'
+      class='input'
+      placeholder='description'
+      v-model="idea.description"
       required
     />
 
@@ -18,7 +29,10 @@ export default {
   name: 'Form',
   data() {
     return {
-      idea: ''
+      idea: {
+        title: '',
+        description: ''
+      }
     };
   },
 
@@ -28,8 +42,7 @@ export default {
 
       const newIdea = {
         id: Date.now(),
-        title: this.idea,
-        description: 'Description'
+        ...this.idea
       }
 
       this.$emit('add-idea', newIdea);
@@ -50,11 +63,18 @@ form {
   height: 40px;
 }
 
-#idea-input {
+.input {
   border: none;
   color: #2c3e50;
   border-radius: 3px;
-  width: 400px;
+}
+
+#title {
+  width: 150px;
+}
+
+#description {
+  width: 200px;
 }
 
 #submit-button {
@@ -63,5 +83,27 @@ form {
   background-color: #2c3e50;
   border-radius: 3px;
   width: 100px;
+}
+
+@media screen and (max-width: 510px) {
+  form {
+    flex-direction: column;
+    justify-content: space-around;
+    height: 120px;
+  }
+
+  #title {
+    width: 200px;
+  }
+
+  #description {
+    height: 2rem;
+  }
+
+  #submit-button {
+    width: 200px;
+    height: 2rem;
+    /* margin-top: 2rem; */
+  }
 }
 </style>
