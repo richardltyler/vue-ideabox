@@ -27,12 +27,15 @@ Vue-ideabox is a virtual playground that I'm using to brush up on Vue.js and lea
   - display the `descriptions`
 
 ### Iteration 7
-- [ ] Build your own `Express` api for your ideas 
+- [x] Build your own `Express` api for your ideas 
   - don't forget documentation!
+
+### Iteration 8 
+- [ ] handle erros for the new `Express` api 
 
 ## How to *Vue* (wink) the app
 
-1. Follow the setup instructions for the [the ideabox api](https://github.com/turingschool-examples/ideabox-api)
+1. Follow the setup instructions for the [the ideabox api](https://github.com/richardltyler/ideabox-api)
 2. Fork and clone this repo
 3. cd into the directory
 4. install dependencies with `npm install` 
